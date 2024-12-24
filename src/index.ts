@@ -3,9 +3,11 @@ import { Car } from "./car";
 
 import promptSync from 'prompt-sync'
 
-/*
-    1. Создать множество типов автомобилей
-*/
+// ---------- [ IMPORTANT VARIABLES, DO NOT TOUCH! ] ----------
+
+const prompt = promptSync()
+
+// ---------- [ --- ] ----------
 
 const car_types = {
     none : new CarTypes(0, "None", 0),
@@ -33,8 +35,6 @@ let cars = {
         car_two: new Car(1, car_types.elite, true)
     }
 };
-
-const prompt = promptSync()
 
 let selected_car = cars.econom.car_one
 let selected_car_type = selected_car.get_car_type()
