@@ -9,7 +9,11 @@ export class CarTypes {
         this.price_1km = price_1km
     }
 
+
+    // -------- [ GETTERS ] ---------
     get_number() { return this.type_number }
     get_name() { return this.type_name }
     get_price() { return this.price_1km }
+
+    // -------- [ SETTERS ] ---------
 }
