@@ -11,22 +11,13 @@ export class Car {
         this.is_free = is_free
     }
 
-    get_car() {
-        return this;
-    }
-
-    get_car_number() {
-        return this.car_number;
-    }
-
-    get_car_type() {
-        return this.car_type;
-    }
-
+    // -------- [ GETTERS ] ---------
+    get_car() { return this; }
+    get_car_number() { return this.car_number; }
+    get_car_type() { return this.car_type; }
     get_is_free() { return this.is_free }
 
-    set_is_free(is_free_new : boolean) {
-        console.log(`New is_free: ${is_free_new}`)
-        this.is_free = is_free_new
-    }
+
+    // -------- [ SETTERS ] ---------
+    set_is_free(is_free_new : boolean) { this.is_free = is_free_new }
 }
