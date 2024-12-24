@@ -9,12 +9,20 @@ const prompt = promptSync()
 
 // ---------- [ --- ] ----------
 
+const car_costs = {
+    none : 0,
+    econom : 99,
+    comfort : 199,
+    business : 299,
+    elite : 399
+}
+
 const car_types = {
-    none : new CarTypes(0, "None", 0),
-    econom : new CarTypes(1, "Эконом", 99),
-    comfort : new CarTypes(2, "Комфорт", 199),
-    business : new CarTypes(3, "Бизнес", 299),
-    elite : new CarTypes(4, "Элитный", 399)
+    none : new CarTypes(0, "None", car_costs.none),
+    econom : new CarTypes(1, "Эконом", car_costs.econom),
+    comfort : new CarTypes(2, "Комфорт", car_costs.comfort),
+    business : new CarTypes(3, "Бизнес", car_costs.business),
+    elite : new CarTypes(4, "Элитный", car_costs.elite)
 }
 
 let cars = {
