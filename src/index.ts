@@ -9,10 +9,10 @@ import promptSync from 'prompt-sync'
 
 const car_types = {
     none : new CarTypes(0, "None", 0),
-    econom : new CarTypes(1, "Эконом", 199),
-    comfort : new CarTypes(2, "Комфорт", 299),
-    business : new CarTypes(3, "Бизнес", 399),
-    elite : new CarTypes(4, "Элитный", 499)
+    econom : new CarTypes(1, "Эконом", 99),
+    comfort : new CarTypes(2, "Комфорт", 199),
+    business : new CarTypes(3, "Бизнес", 299),
+    elite : new CarTypes(4, "Элитный", 399)
 }
 
 let cars = {
