@@ -1,6 +1,8 @@
 import { CarTypes } from "./car_types";
 import { Car } from "./car";
 
+import promptSync from 'prompt-sync'
+
 /*
     1. Создать множество типов автомобилей
 */
@@ -32,13 +34,12 @@ let cars = {
     }
 };
 
+const prompt = promptSync()
+
 let selected_car = cars.econom.car_one
 let selected_car_type = selected_car.get_car_type()
 console.log(`Selected car: [${selected_car.get_car_number()}] - ${selected_car_type.get_name()}`)
 
-const required_distance = 3 // В километрах
+const required_distance = parseInt(prompt('Сколько хотите проехать километров?: '))
 const total_price = selected_car_type.get_price() * required_distance
 console.log(`Для достижения ${required_distance} км на данном классе автомобиля потребуется: ${total_price} руб.`)
-console.log(`На данный момент автомобиль имеет статус: ${selected_car.get_is_free() == true ? "Свободен" : "Занят"}!`)
-selected_car.set_is_free(false)
-console.log(`Теперь на данный момент автомобиль имеет статус: ${selected_car.get_is_free() == true ? "Свободен" : "Занят"}!`)
