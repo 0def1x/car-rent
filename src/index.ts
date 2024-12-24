@@ -38,7 +38,7 @@ const prompt = promptSync()
 
 let selected_car = cars.econom.car_one
 let selected_car_type = selected_car.get_car_type()
-console.log(`Selected car: [${selected_car.get_car_number()}] - ${selected_car_type.get_name()}`)
+console.log(`Выбранный автомобиль: [${selected_car.get_car_number()}] - ${selected_car_type.get_name()}`)
 
 const required_distance = parseInt(prompt('Сколько хотите проехать километров?: '))
 const total_price = selected_car_type.get_price() * required_distance
